@@ -1,0 +1,8 @@
+prefix=/home/pavel/catkin_ws/devel
+
+Name: teleop
+Description: Description of teleop
+Version: 0.1.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 
