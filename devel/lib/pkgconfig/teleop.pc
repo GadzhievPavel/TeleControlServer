@@ -1,4 +1,4 @@
-prefix=/home/pavel/catkin_ws/devel
+prefix=/home/pavel/TeleControlServer/devel
 
 Name: teleop
 Description: Description of teleop

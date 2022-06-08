@@ -1,4 +1,4 @@
-prefix=/home/pavel/catkin_ws/install
+prefix=/home/pavel/TeleControlServer/install
 
 Name: teleop
 Description: Description of teleop

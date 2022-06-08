@@ -1,8 +1,8 @@
-# Install script for directory: /home/pavel/catkin_ws/src/teleop
+# Install script for directory: /home/pavel/TeleControlServer/src/teleop
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/pavel/catkin_ws/install")
+  set(CMAKE_INSTALL_PREFIX "/home/pavel/TeleControlServer/install")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -32,18 +32,23 @@ if(NOT DEFINED CMAKE_INSTALL_SO_NO_EXE)
   set(CMAKE_INSTALL_SO_NO_EXE "1")
 endif()
 
-if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/pavel/catkin_ws/build/teleop/catkin_generated/installspace/teleop.pc")
+# Is this installation the result of a crosscompile?
+if(NOT DEFINED CMAKE_CROSSCOMPILING)
+  set(CMAKE_CROSSCOMPILING "FALSE")
 endif()
 
-if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/pavel/TeleControlServer/build/teleop/catkin_generated/installspace/teleop.pc")
+endif()
+
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/teleop/cmake" TYPE FILE FILES
-    "/home/pavel/catkin_ws/build/teleop/catkin_generated/installspace/teleopConfig.cmake"
-    "/home/pavel/catkin_ws/build/teleop/catkin_generated/installspace/teleopConfig-version.cmake"
+    "/home/pavel/TeleControlServer/build/teleop/catkin_generated/installspace/teleopConfig.cmake"
+    "/home/pavel/TeleControlServer/build/teleop/catkin_generated/installspace/teleopConfig-version.cmake"
     )
 endif()
 
-if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/teleop" TYPE FILE FILES "/home/pavel/catkin_ws/src/teleop/package.xml")
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/teleop" TYPE FILE FILES "/home/pavel/TeleControlServer/src/teleop/package.xml")
 endif()
 

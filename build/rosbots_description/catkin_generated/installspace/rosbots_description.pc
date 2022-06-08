@@ -1,0 +1,8 @@
+prefix=/home/pavel/TeleControlServer/install
+
+Name: rosbots_description
+Description: Description of rosbots_description
+Version: 0.1.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

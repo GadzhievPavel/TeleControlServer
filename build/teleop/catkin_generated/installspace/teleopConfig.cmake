@@ -67,14 +67,14 @@ set(teleop_CONFIG_INCLUDED TRUE)
 
 # set variables for source/devel/install prefixes
 if("FALSE" STREQUAL "TRUE")
-  set(teleop_SOURCE_PREFIX /home/pavel/catkin_ws/src/teleop)
-  set(teleop_DEVEL_PREFIX /home/pavel/catkin_ws/devel)
+  set(teleop_SOURCE_PREFIX /home/pavel/TeleControlServer/src/teleop)
+  set(teleop_DEVEL_PREFIX /home/pavel/TeleControlServer/devel)
   set(teleop_INSTALL_PREFIX "")
   set(teleop_PREFIX ${teleop_DEVEL_PREFIX})
 else()
   set(teleop_SOURCE_PREFIX "")
   set(teleop_DEVEL_PREFIX "")
-  set(teleop_INSTALL_PREFIX /home/pavel/catkin_ws/install)
+  set(teleop_INSTALL_PREFIX /home/pavel/TeleControlServer/install)
   set(teleop_PREFIX ${teleop_INSTALL_PREFIX})
 endif()
 
@@ -154,7 +154,7 @@ foreach(library ${libraries})
     set(lib_path "")
     set(lib "${library}-NOTFOUND")
     # since the path where the library is found is returned we have to iterate over the paths manually
-    foreach(path /home/pavel/catkin_ws/install/lib;/home/pavel/catkin_ws/devel/lib;/opt/ros/kinetic/lib)
+    foreach(path /home/pavel/TeleControlServer/install/lib;/home/pavel/TeleControlServer/devel/lib;/opt/ros/noetic/lib)
       find_library(lib ${library}
         PATHS ${path}
         NO_DEFAULT_PATH NO_CMAKE_FIND_ROOT_PATH)
@@ -211,7 +211,7 @@ foreach(depend ${depends})
   _unpack_libraries_with_build_configuration(teleop_LIBRARIES ${teleop_LIBRARIES})
 
   _list_append_unique(teleop_LIBRARY_DIRS ${${teleop_dep}_LIBRARY_DIRS})
-  list(APPEND teleop_EXPORTED_TARGETS ${${teleop_dep}_EXPORTED_TARGETS})
+  _list_append_deduplicate(teleop_EXPORTED_TARGETS ${${teleop_dep}_EXPORTED_TARGETS})
 endforeach()
 
 set(pkg_cfg_extras "")

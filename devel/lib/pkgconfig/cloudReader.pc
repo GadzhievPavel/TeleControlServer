@@ -1,0 +1,8 @@
+prefix=/home/pavel/TeleControlServer/devel
+
+Name: cloudReader
+Description: Description of cloudReader
+Version: 0.1.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

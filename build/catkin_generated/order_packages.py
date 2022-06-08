@@ -1,5 +1,5 @@
 # generated from catkin/cmake/template/order_packages.context.py.in
-source_root_dir = '/home/pavel/catkin_ws/src'
+source_root_dir = '/home/pavel/TeleControlServer/src'
 whitelisted_packages = ''.split(';') if '' != '' else []
 blacklisted_packages = ''.split(';') if '' != '' else []
-underlay_workspaces = '/home/pavel/catkin_ws/devel;/opt/ros/kinetic'.split(';') if '/home/pavel/catkin_ws/devel;/opt/ros/kinetic' != '' else []
+underlay_workspaces = '/home/pavel/TeleControlServer/devel;/opt/ros/noetic'.split(';') if '/home/pavel/TeleControlServer/devel;/opt/ros/noetic' != '' else []

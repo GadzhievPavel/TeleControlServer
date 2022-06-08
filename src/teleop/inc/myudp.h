@@ -7,6 +7,7 @@
 #include <QTextCodec>
 //#include <QNetworkDatagram>
 #include <iostream>
+
 using namespace std;
 
 class MyUDP : public QObject
@@ -26,9 +27,11 @@ public slots:
 private:
     QString clientAddress="192.168.1.36";
     QString serverAddress="192.168.1.254";
+    int port=21321;
     int val;
     int speed, angle;
     QUdpSocket *socket;
+    bool isStartPacket(QByteArray buffer);
 };
 
 #endif // MYUDP_H
